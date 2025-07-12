@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bull'da Barbershop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Elite&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="navsec" id="navsec">
+        <nav>
+        <a href="#uvod"><img class="logo" src="logo_noback.png" alt="logo"></a>
+        <ul>
+            <a class="link" href="#uvod"><li></li>Úvod</a></li>
+            <a class="link" href="#onas"><li></li>O nás</a></li>
+            <a class="link" href="#cenik"><li></li>Ceník</a></li>
+            <a class="link" href="#kontakt"><li></li>Kontakt</a></li>
+            <a class="cta-green" href="https://www.reservio.cz/b/jakub-bulusek">Rezervovat</a>
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </ul>
+        </nav>
+    </div>
+    <script> //hamburger java script
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+
+        hamburger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        });
+    </script>
+    <section id="uvod">
+        <div class="uvod">
+            <div class="text-right">
+                <h1>Kvalitní úprava vlasů a vousů</h1>
+                <h3>Stav se u nás v Rychnově na pokec a kvalitní sestřih</h3>
+                <div class="reservio">
+                    <img class="reservio-logo" src="reservio logo.png" alt="logo-reservio">
+                    <div class="hvezdy">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                    </div>
+                    <p>4,99</p>
+                    <p>(222)</p>
+                </div>
+                <div class="buttons">
+                    <a class="btn1" href="https://www.reservio.cz/b/jakub-bulusek">Mám zájem</a>
+                    <a class="btn2" href="#onas">Zjistit více</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="onas">
+        <div class="onas">
+            <img src="log_venku.jpeg" alt="logo-venku">
+            <div class="text-right">
+                <h2>O nás</h2>
+                <p>Jsme malý barbershop v centru Rychnova. Náš tým se skládá ze dvou velice šikovných barberů Jakuba a Honzy. Najdete nás v bývalé radniční budově.
+                    Problém s parkováním u nás není, jelikož máme parkování hned vedle budovy a navíc je zdarma.</p>
+                <p>Náš tým se skládá se 2 barberů - Jakuba a Honzy. Oba už mají letité zkušenosti a rádi poradí jaký střih na hodí právě pro vás.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cenik">
+        <h2 class="nadpis-cenik">Ceník</h2>
+        <div class="cenik">
+            <div class="sudy-blok">
+                <img class="icon" src="icon1.svg" alt="icon-hair">
+                <p>Střih vlasů</p>
+                <p>420 Kč</p>
+                <a   href="https://www.reservio.cz/b/jakub-bulusek/booking?step=2&serviceId=d3bcfa18-5e05-42bf-ba31-82ea0a1d956b">Rezervovat</a>
+            </div>
+            <div class="sudy-blok">
+                <img class="icon" src="icon2.svg" alt="icon-hair">
+                <p>Dětský střih</p>
+                <p>350 Kč</p>
+                <a   href="https://www.reservio.cz/b/jakub-bulusek/booking?step=2&serviceId=84590bbe-f79f-4f65-96d6-c83503a114c0">Rezervovat</a>
+
+            </div>
+            <div class="sudy-blok">
+                <img class="icon" src="icon3.svg" alt="icon-hair">
+                <p>Holení vousů</p>
+                <p>340 Kč</p>
+                <a   href="https://www.reservio.cz/b/jakub-bulusek/booking?step=2&serviceId=856bdea0-8e16-4e4a-a998-51a8936f1cea">Rezervovat</a>
+
+            </div>
+            <div class="sudy-blok">
+                <img class="icon" src="icon4.svg" alt="icon-hair">
+                <p>Úprava vousů</p>
+                <p>380 Kč</p>
+                <a   href="https://www.reservio.cz/b/jakub-bulusek/booking?step=2&serviceId=55861271-7cbf-4216-a4b1-781881296ff8">Rezervovat</a>
+            </div>
+            <div class="sudy-blok">
+                <img class="icon" src="icon5.svg" alt="icon-hair">
+                <p>Střih pouze strojkem</p>
+                <p>350 Kč</p>
+                <a   href="https://www.reservio.cz/b/jakub-bulusek/booking?step=2&serviceId=be9881cd-9f96-46eb-ab97-c27a7cc2027c">Rezervovat</a>
+            </div>
+            <div class="sudy-blok">
+                <img class="icon" src="icon6.svg" alt="icon-hair">
+                <p>Střih dlouhých vlasů</p>
+                <p>480 Kč</p>
+                <a   href="https://www.reservio.cz/b/jakub-bulusek/booking?step=2&serviceId=1b1c306d-04a6-4b4f-a66a-d3cb9c3f3862">Rezervovat</a>
+            </div>
+            <div class="sudy-blok">
+                <img class="icon" src="icon7.svg" alt="icon-hair">
+                <p>Střih vlasů a holení vousů</p>
+                <p>620 Kč</p>
+                <a   href="https://www.reservio.cz/b/jakub-bulusek/booking?step=2&serviceId=e686bafc-36e7-4934-a0bd-0200add4a34b">Rezervovat</a>
+            </div>
+            <div class="sudy-blok">
+                <img class="icon" src="icon8.svg" alt="icon-hair">
+                <p>Střih vlasů a úprava vousů</p>
+                <p>660 Kč</p>
+                <a   href="https://www.reservio.cz/b/jakub-bulusek/booking?step=2&serviceId=8d35ebad-44d5-4a52-a881-fb07aaeb5f46">Rezervovat</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="sec-kontakt">
+        <h2 class="nadpis-kontakt">Kontakt</h2>
+        <div class="kontakt">
+            <div class="provozovna">
+                <h4>Kde nás najdete:</h4>
+                <p>Husova 490</p>
+                <p>Rychnov u Jablonce nad Nisou, 468 02</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2527.9518709898043!2d15.147089676927367!3d50.68371837054016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470eb5502dfa6d23%3A0x2616d48da09c612e!2sHusova%20490%2C%20468%2002%20Rychnov%20u%20Jablonce%20nad%20Nisou!5e0!3m2!1scs!2scz!4v1752349229207!5m2!1scs!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+            <div class="kontakty">
+                <div class="zodpovedne-osoby">
+                    <div class="blok-kontakt">
+                        <h3>Jakub Bulušek</h3>
+                        <p>IČO: 56164816</p>
+                        <p>Tel: 149 165 156</p>
+                    </div>
+                    <div class="blok-kontakt">
+                        <h3>Jan Kačena</h3>
+                        <p>IČO: 468125478</p>
+                        <p>Tel: 123 456 789</p>
+                    </div>
+                </div>
+                
+                <div class="blok-kontakt">
+                    <h3>Otevírací doba</h3>
+                    <p>Pondělí-Neděle</p>
+                    <p>dle objednání</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>©2025 Bull'da Barbershop. Všechna práva vyhrazena</p>
+        <p>Designed by <a href="">JPdesign</a></p>
+    </footer>
+</body>
+</html>

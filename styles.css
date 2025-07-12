@@ -1,0 +1,463 @@
+  :root{
+    --maincolor: rgb(4, 54, 4);
+    --textshadow: 2px 4px 3px rgba(0,0,0,0.3);
+    --borderadius: 15px;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    }
+
+  html{
+    scroll-behavior: smooth;
+    background-color: #eefae8;
+  }
+  section{
+    margin: auto;
+    scroll-margin-top: 100px; /* výška tvé fixní hlavičky */
+
+  }
+  h1{
+    font-size: 70px;
+    color: rgb(222, 245, 223);
+    text-shadow:  var(--textshadow);
+    text-align: center;
+  }
+ h2{
+    font-size: 40px; 
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+  h3{
+    font-size: 30px;
+    color: rgb(222, 245, 223);
+	  text-shadow: var(--textshadow); 
+    font-weight: 400;
+    text-align: center;
+
+  }
+  h4{
+    font-size: 32px;
+  }
+  p{
+    font-size: 20px;
+  }
+  /*navbar*/
+  .logo{
+    width: 60px;
+  }
+  
+  #navsec{
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-color: rgb(58, 54, 54);
+    background: rgba(255, 255, 255, 0.15); /* Poloprůhledné bílé pozadí */
+    backdrop-filter: blur(10px); /* Rozmazání pozadí */
+    -webkit-backdrop-filter: blur(10px); /* Pro Safari */
+    border: 1px solid rgba(15, 14, 14, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  nav{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 5px 35px;
+    margin: 0 50px;
+    color: rgb(0, 0, 0);
+    position: sticky;
+    
+    }
+  nav a{
+    text-decoration: none;
+    list-style: none;
+    font-size: 18px;
+    color: black;
+  }
+  nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .cta-green{
+    padding: 10px 15px;
+    background: var(--maincolor);
+    font-size: 18px;
+    border-radius: var(--borderadius);
+    box-shadow: none;
+    border: none;
+    color: white;
+  }
+
+  .hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  }
+
+  .bar {
+    height: 4px;
+    width: 100%;
+    background: #000000;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  /*uvod*/
+  .uvod{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    background: url(uvod_photo1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    backdrop-filter: blur(10px);
+    margin-bottom: 110px;
+  }
+  .uvod img{
+    width: 30%;
+    border-radius: var(--borderadius);
+  }
+  .text-right{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    backdrop-filter: blur(3px);
+    border-radius: var(--borderadius);
+  
+  }
+  .uvod h3{
+    font-weight: 300;
+    max-width: 65%;
+  }
+  .reservio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .reservio p{
+    color: grey;
+  }
+  .hvezdy img{
+    width: 20px;
+  }
+  .reservio p{
+    color: beige;
+  }
+  .buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .buttons a{
+    padding: 10px 25px;
+    font-size: 25px;
+    border-radius: var(--borderadius);
+    text-decoration: none;
+  }
+  .btn1{
+  background-color: #043115;
+  box-shadow: rgba(5, 46, 21, 0.2) 0 -25px 18px -14px inset,rgba(11, 99, 45, 0.15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: rgb(224, 243, 224);
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+}
+
+  .btn2{
+    border: solid 1px #043115 ;
+    color: #043115;
+    background-color: rgb(224, 243, 224);
+    box-shadow: rgba(5, 46, 21, 0.164) 0 -25px 18px -14px inset,rgba(11, 99, 45, 0.13) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+
+  }
+  /*onas*/
+  .onas{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 90%;
+    margin: auto;
+  }
+  .onas img{
+    width: 30%;
+    border-radius: var(--borderadius);
+  }
+  /*cenik*/
+  .nadpis-cenik{
+    margin-bottom: 25px;
+    margin-top: 110px;
+  }
+  .cenik{
+   display: grid;
+  grid-template-rows: repeat(2, 1fr);   /* 2 řádky */
+  grid-template-columns: repeat(4, 1fr); /* 4 sloupce */
+  gap: 10px; /* mezery mezi buňkami, volitelné */
+  align-items: center;
+  justify-content: center;
+  max-width: 90%;
+  margin: auto;
+
+  }
+  .cenik h2{
+    text-align: center;
+  }
+  .cenik p{
+    font-size: 25px;
+  }
+  .sudy-blok{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #255F38;
+    border-radius: var(--borderadius);
+    padding: 10px;
+    color: white;
+    aspect-ratio: 1/1;
+    width: 265px;
+    margin: auto;
+    box-shadow: rgba(4, 122, 24, 0.411) 0px 7px 29px 0px;
+  }
+ .cenik a{
+  border: solid beige 2px;
+  color: beige;
+  border-radius: var(--borderadius);
+  padding: 5px 25px;
+  font-size: 20px;
+  text-decoration: none;
+ }
+  .icon{
+    width: 95px;
+    color: white;
+  }
+  /*kontakt*/
+  .sec-kontakt{
+    margin-top: 110px;
+  }
+  .nadpis-kontakt{
+    text-align: center;
+    color: black;
+  }
+  .kontakt{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .kontakt h4{
+    font-size: 25px;
+    font-weight: 450;
+  }
+  iframe{
+    border-radius: var(--borderadius);
+  }
+  .zodpovedne-osoby{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+  .provozovna{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-direction: column;
+  }
+  .kontakty{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+
+  }
+  .blok-kontakt{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+  .blok-kontakt h3{
+    color: black;
+    text-shadow: none;
+  }
+  /*footer*/
+  footer{
+    background-color: #1d552f;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-weight: 200;
+    padding: 10px 20px;
+  }
+  footer p{
+    font-size: 15px;
+  }
+  footer a{
+    color: white;
+    text-decoration: underline;
+  }
+
+  /*optimalizace*/
+  @media (max-width: 1250px)
+  {
+    .cenik{
+      grid-template-rows: repeat(4, 1fr);   /* 8 řádkůy */
+      grid-template-columns: repeat(2, 1fr); /* 1 sloupec00 */
+    }
+  }
+  @media (max-width: 980px)
+  {
+    .onas img{
+      display: none;
+    }
+  }
+    @media (max-width: 768px) {
+    /*nav + hamburder*/
+    nav .link, .cta-green {
+      display: none;
+    }
+    nav.active ul{
+      display: block;
+    }
+    nav.active .link, nav.active .cta-green {
+      display: block;
+      padding: 10px 0;
+      width: 100%;
+      text-align: center;
+      transition: ease 0.5s;
+    }
+    nav {
+      display: block;
+    }
+    .hamburger {
+      display: flex;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+
+    /*uvod*/
+    .text-right{
+      max-width: 100%;
+    }
+    .uvod h1{
+      font-size: 55px;
+      text-align: center;
+    }
+    .uvod h3{
+      font-size: 25px;
+      text-align: center;
+      width: 55%;
+    }
+        /*cenik*/
+    .cenik{
+        grid-template-rows: repeat(4, 1fr);   /* 8 řádkůy */
+        grid-template-columns: repeat(2, 1fr); /* 1 sloupec00 */
+    }
+    /*kontakt*/
+    .kontakt{
+      gap: 30px;
+    }
+  }  
+  @media (max-width: 690px){
+    .uvod h1{
+      font-size: 50px;
+    }
+    .uvod h3{
+      font-size: 20px;
+    }
+    .btn2{
+      display: none;
+    }
+    .buttons a{
+      font-size: 20px;
+    }
+    .reservio-logo{
+      width: 40px;
+    }
+    .reservio p{
+      font-size: 13px;
+    }
+    .reservio .star{
+      width: 17px;
+    }
+
+    /*cenik*/
+    .sudy-blok{
+      max-width: 200px;
+    }
+    .sudy-blok p{
+      font-size: 18px;
+    }
+    .sudy-blok img{
+      width: 80px;
+    }
+    .sudy-blok a{
+      font-size: 15px;
+    }
+    .provozovna iframe{
+      width: 350px;
+    }
+
+  }
+  
+  @media (max-width: 575px) {
+    /*uvod*/
+    .kontakt p{
+      font-size: 15px;
+    }
+    .kontakt h3{
+      font-size: 22px;
+    }
+    
+    .reservio{
+      display: none;
+    }
+    h2{
+      font-size: 30px;
+    }
+  }
+
+  @media(max-width: 500px){
+    .uvod h1{
+      font-size: 40px;
+    }
+    .uvod h3{
+      font-size: 18px;
+    }
+    .btn1{
+      font-size: 18px;
+    }
+    .cenik{
+        grid-template-rows: repeat(8, 1fr);   /* 8 řádkůy */
+        grid-template-columns: repeat(1, 1fr); /* 1 sloupec00 */
+    }
+    .provozovna iframe{
+      width: 250px;
+    }
+  }
