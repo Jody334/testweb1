@@ -53,7 +53,7 @@
     top: 0;
     z-index: 5;
     background-color: rgb(58, 54, 54);
-    background: rgba(255, 255, 255, 0.15); /* Poloprůhledné bílé pozadí */
+    background: rgba(213, 245, 226, 0.801); /* Poloprůhledné bílé pozadí */
     backdrop-filter: blur(10px); /* Rozmazání pozadí */
     -webkit-backdrop-filter: blur(10px); /* Pro Safari */
     border: 1px solid rgba(15, 14, 14, 0.3);
@@ -102,11 +102,23 @@
   cursor: pointer;
   margin-left: auto;
   }
+  .hamburger.active span:nth-child(1) {
+  transform: translateY(11px) rotate(45deg);
+  width: 40px;
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+    width: 40px;
+
+}
 
   .bar {
     height: 4px;
     width: 100%;
-    background: #000000;
+    background: #4d4949;
     margin: 4px 0;
     border-radius: 2px;
     transition: 0.3s;
@@ -236,17 +248,57 @@
     margin: auto;
     box-shadow: rgba(4, 122, 24, 0.411) 0px 7px 29px 0px;
   }
- .cenik a{
-  border: solid beige 2px;
-  color: beige;
-  border-radius: var(--borderadius);
-  padding: 5px 25px;
-  font-size: 20px;
-  text-decoration: none;
- }
   .icon{
     width: 95px;
     color: white;
+  }
+  #cenik a{
+    text-align: center;
+    text-decoration: none;
+    font-size: 35px;
+    color: var(--maincolor);
+    border: solid 1px var(--maincolor);
+    border-radius: var(--borderadius);
+    padding: 10px 25px;
+  }
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .rez-btn{
+    width:fit-content;
+    margin-top: 30px;
+  }
+
+  /*recenze*/
+  .nadpis-recenze{
+    margin-top: 110px;
+  }
+  #recenze p,h4{
+    text-align: center;
+  }
+  .box-recenze{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+
+    border: var(--maincolor) solid 1px;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: var(--borderadius);
+    background-color: #255F38;
+    color: white;
+  }
+  .stars{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .star{
+    width: 20px;
   }
   /*kontakt*/
   .sec-kontakt{
@@ -320,6 +372,15 @@
   footer a{
     color: white;
     text-decoration: underline;
+  }
+  .socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .socials img{
+    width: 30px;
   }
 
   /*optimalizace*/

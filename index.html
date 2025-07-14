@@ -19,8 +19,9 @@
             <a class="link" href="#uvod"><li></li>Úvod</a></li>
             <a class="link" href="#onas"><li></li>O nás</a></li>
             <a class="link" href="#cenik"><li></li>Ceník</a></li>
+            <a class="link" href="#recenze"><li></li>Recenze</a></li>
             <a class="link" href="#kontakt"><li></li>Kontakt</a></li>
-            <a class="cta-green" href="https://www.reservio.cz/b/jakub-bulusek">Rezervovat</a>
+            <a class="cta-green" href="https://www.reservio.cz/b/jakub-bulusek">Rezervace</a>
             <button class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -35,7 +36,23 @@
 
         hamburger.addEventListener('click', () => {
         nav.classList.toggle('active');
+        hamburger.classList.toggle('active');
+        event.stopPropagation();
+
         });
+        
+        nav.addEventListener('click', (event) => {
+            event.stopPropagation(); // Zabrání zavření při kliknutí uvnitř menu
+        });
+
+        document.addEventListener('click', () => {
+        // Pokud je menu otevřené, zavři ho
+        if (nav.classList.contains('active')) {
+            nav.classList.remove('active');
+            hamburger.classList.remove('active');
+        }
+        });
+
     </script>
     <section id="uvod">
         <div class="uvod">
@@ -67,9 +84,8 @@
             <img src="log_venku.jpeg" alt="logo-venku">
             <div class="text-right">
                 <h2>O nás</h2>
-                <p>Jsme malý barbershop v centru Rychnova. Náš tým se skládá ze dvou velice šikovných barberů Jakuba a Honzy. Najdete nás v bývalé radniční budově.
-                    Problém s parkováním u nás není, jelikož máme parkování hned vedle budovy a navíc je zdarma.</p>
-                <p>Náš tým se skládá se 2 barberů - Jakuba a Honzy. Oba už mají letité zkušenosti a rádi poradí jaký střih na hodí právě pro vás.</p>
+                <p>Náš barbershop najdete přímo v centru Rychnova, kde vám nabízíme profesionální služby v příjemném a přátelském prostředí. O váš nový střih se postarají Jakub a Honza – dva zkušení barbeři, kteří vždy ochotně poradí a pomohou vybrat styl přesně podle vašich představ. Zakládáme si na individuálním přístupu a pohodové atmosféře, díky které se u nás budete cítit jako doma.</p>
+                <p>Myslíme i na vaše pohodlí – parkování je u nás bez starostí. Hned vedle budovy najdete bezplatné parkoviště, a pokud by bylo plné, další možnost parkování zdarma je jen pár kroků od nás. Těšíme se na vaši návštěvu!</p>
             </div>
         </div>
     </section>
@@ -81,51 +97,63 @@
                 <img class="icon" src="icon1.svg" alt="icon-hair">
                 <p>Střih vlasů</p>
                 <p>420 Kč</p>
-                <a   href="https://www.reservio.cz/b/jakub-bulusek/booking?step=2&serviceId=d3bcfa18-5e05-42bf-ba31-82ea0a1d956b">Rezervovat</a>
             </div>
             <div class="sudy-blok">
                 <img class="icon" src="icon2.svg" alt="icon-hair">
                 <p>Dětský střih</p>
                 <p>350 Kč</p>
-                <a   href="https://www.reservio.cz/b/jakub-bulusek/booking?step=2&serviceId=84590bbe-f79f-4f65-96d6-c83503a114c0">Rezervovat</a>
 
             </div>
             <div class="sudy-blok">
                 <img class="icon" src="icon3.svg" alt="icon-hair">
                 <p>Holení vousů</p>
                 <p>340 Kč</p>
-                <a   href="https://www.reservio.cz/b/jakub-bulusek/booking?step=2&serviceId=856bdea0-8e16-4e4a-a998-51a8936f1cea">Rezervovat</a>
 
             </div>
             <div class="sudy-blok">
                 <img class="icon" src="icon4.svg" alt="icon-hair">
                 <p>Úprava vousů</p>
                 <p>380 Kč</p>
-                <a   href="https://www.reservio.cz/b/jakub-bulusek/booking?step=2&serviceId=55861271-7cbf-4216-a4b1-781881296ff8">Rezervovat</a>
             </div>
             <div class="sudy-blok">
                 <img class="icon" src="icon5.svg" alt="icon-hair">
                 <p>Střih pouze strojkem</p>
                 <p>350 Kč</p>
-                <a   href="https://www.reservio.cz/b/jakub-bulusek/booking?step=2&serviceId=be9881cd-9f96-46eb-ab97-c27a7cc2027c">Rezervovat</a>
             </div>
             <div class="sudy-blok">
                 <img class="icon" src="icon6.svg" alt="icon-hair">
                 <p>Střih dlouhých vlasů</p>
                 <p>480 Kč</p>
-                <a   href="https://www.reservio.cz/b/jakub-bulusek/booking?step=2&serviceId=1b1c306d-04a6-4b4f-a66a-d3cb9c3f3862">Rezervovat</a>
             </div>
             <div class="sudy-blok">
                 <img class="icon" src="icon7.svg" alt="icon-hair">
                 <p>Střih vlasů a holení vousů</p>
                 <p>620 Kč</p>
-                <a   href="https://www.reservio.cz/b/jakub-bulusek/booking?step=2&serviceId=e686bafc-36e7-4934-a0bd-0200add4a34b">Rezervovat</a>
             </div>
             <div class="sudy-blok">
                 <img class="icon" src="icon8.svg" alt="icon-hair">
                 <p>Střih vlasů a úprava vousů</p>
                 <p>660 Kč</p>
-                <a   href="https://www.reservio.cz/b/jakub-bulusek/booking?step=2&serviceId=8d35ebad-44d5-4a52-a881-fb07aaeb5f46">Rezervovat</a>
+            </div>
+        </div>
+        <div class="container"><a class="rez-btn" href="https://www.reservio.cz/b/jakub-bulusek">Rezervovat</div></a>
+    </section>
+
+    <section id="recenze">
+        <h2 class="nadpis-recenze">Recenze</h2>¨
+        <p>Přidejte se k dalším z mnoha spokojených zákazníků našeho barbershopu</p>
+        <div class="recenze">
+            <button class="arrow left">&#8592;</button>
+            <div class="box-recenze">
+                <h4>Tomáš</h4>
+                <p>Moc hezké prostředí, hudba, občerstvení a super přístup, děkujeme 😊🙂</p>
+                <div class="stars">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                    </div>
             </div>
         </div>
     </section>
@@ -163,6 +191,10 @@
 
     <footer>
         <p>©2025 Bull'da Barbershop. Všechna práva vyhrazena</p>
+        <div class="socials">
+            <a href=""><img src="facebook.svg" alt="facebook"></a>
+            <a href="https://www.instagram.com/bulldabarbershop/"><img src="instagram.svg" alt="instagram"></a>
+        </div>
         <p>Designed by <a href="">JPdesign</a></p>
     </footer>
 </body>
