@@ -136,16 +136,18 @@
                 <p>660 Kč</p>
             </div>
         </div>
-        <div class="container"><a class="rez-btn" href="https://www.reservio.cz/b/jakub-bulusek">Rezervovat</div></a>
+        <div class="container"><a class="rez-btn" href="https://www.reservio.cz/b/jakub-bulusek">Rezervace</div></a>
     </section>
 
     <section id="recenze">
         <h2 class="nadpis-recenze">Recenze</h2>¨
         <p>Přidejte se k dalším z mnoha spokojených zákazníků našeho barbershopu</p>
-        <div class="recenze">
+        
+       <div class="slideshow-wrapper">
+        <div class="slideshow-container">
             <button class="arrow left">&#8592;</button>
-            <div class="box-recenze">
-                <h4>Tomáš</h4>
+            <div class="slide active">
+                <h4>Nikolas</h4>
                 <p>Moc hezké prostředí, hudba, občerstvení a super přístup, děkujeme 😊🙂</p>
                 <div class="stars">
                         <img class="star" src="star.svg" alt="star">
@@ -155,8 +157,98 @@
                         <img class="star" src="star.svg" alt="star">
                     </div>
             </div>
+            <div class="slide">
+                <h4>Matyas</h4>
+                <p>Jako vždy peckoš cut, nejlepší místo na odpočinek, s ještě lepší atmosférou.</p>
+                <div class="stars">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                    </div>
+            </div>
+            <div class="slide">
+                <h4>Jan</h4>
+                <p>Střih velice v pořádku. Profesionální přístup. Čisté a příjemné prostředí. 10/10 doporučuji.</p>
+                <div class="stars">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                    </div>
+            </div>
+            <div class="slide">
+                <h4>Vladimír</h4>
+                <p>Opět v TOPu . Doporučuji !</p>
+                <div class="stars">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                    </div>
+            </div>
+            <div class="slide">
+                <h4>Miroslav</h4>
+                <p>Skvělé prostředí, přátelský kolektiv a profesionální přístup. Výsledek předčil očekávání.</p>
+                <div class="stars">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                        <img class="star" src="star.svg" alt="star">
+                    </div>
+            </div>
+
+            <button class="arrow right">&#8594;</button>
         </div>
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+       </div> 
+        
+
     </section>
+    <script>
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const leftArrow = document.querySelector('.arrow.left');
+    const rightArrow = document.querySelector('.arrow.right');
+    let current = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+    }
+
+    leftArrow.addEventListener('click', () => {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    });
+
+    rightArrow.addEventListener('click', () => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    });
+
+    //navigace přes tečky
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        current = index;
+        showSlide(current);
+      });
+    });
+  </script>
 
     <section id="kontakt" class="sec-kontakt">
         <h2 class="nadpis-kontakt">Kontakt</h2>

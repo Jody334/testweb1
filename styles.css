@@ -43,6 +43,13 @@
   p{
     font-size: 20px;
   }
+  a{
+    transition: 0.2s ease-in-out;
+  }
+  a:hover{
+    scale: 1.1;
+    transition: 0.2s ease-in-out;
+  }
   /*navbar*/
   .logo{
     width: 60px;
@@ -185,7 +192,7 @@
   }
   .btn1{
   background-color: #043115;
-  box-shadow: rgba(5, 46, 21, 0.2) 0 -25px 18px -14px inset,rgba(11, 99, 45, 0.15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -25px 18px -14px inset,rgba(0, 0, 0, 0.15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
   color: rgb(224, 243, 224);
   text-align: center;
   text-decoration: none;
@@ -269,6 +276,12 @@
   .rez-btn{
     width:fit-content;
     margin-top: 30px;
+    transition: 0.2s ease-in-out;
+
+  }
+  .rez-btn:hover{
+    scale: 1.1;
+    transition: 0.2s ease-in-out;
   }
 
   /*recenze*/
@@ -277,25 +290,108 @@
   }
   #recenze p,h4{
     text-align: center;
+    padding: 10px;
   }
-  .box-recenze{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
+  .slideshow-wrapper {
+      text-align: center;
+    }
+  .slideshow-container {
+      position: relative;
+      width: 500px;
+      height: 175px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0px;
+      background: rgb(242, 255, 250);
+      border-radius: 10px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      overflow: hidden;
+      margin: 20px auto;
+    }
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+      font-size: 2rem;
+      color: #222;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: absolute;
+      left: 0; top: 0;
+      background:  transparent;
+      transition: opacity 0.3s;
+      padding-top: 20px;
+      box-sizing: border-box;
+    }
+    .slide.active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 400px;
+      margin: auto;
+      left: 10%;
+      opacity: 1;
+      z-index: 1;
+      bottom: 10%;
+    }
+    .arrow {
+      position: absolute;
+      top: 47%;
+      transform: translateY(-50%);
+      background: transparent;
+      color: black;
+      border: none;
+      width: 40px;
+      height: 40px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 2;
+      opacity: 0.8;
+      transition: background 0.2s;
+    }
+    .arrow:hover {
+      scale: 1.05;
+      opacity: 1;
+    }
+    .arrow.left {
+      left: 0px;
+      padding: 5px;
+      margin-right: 40px;
+    }
+    .arrow.right {
+      right: 10px;
+    }
 
-    border: var(--maincolor) solid 1px;
-    width: fit-content;
-    padding: 10px 20px;
-    border-radius: var(--borderadius);
-    background-color: #255F38;
-    color: white;
-  }
+    .dots {
+      margin-top: 15px;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .dot:hover{
+      scale: 1.1;
+      transition: 0.2s ease-in-out;
+    }
+
+    .dot.active {
+      background-color: #333;
+    }
   .stars{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
   }
   .star{
     width: 20px;
@@ -399,11 +495,19 @@
   }
     @media (max-width: 768px) {
     /*nav + hamburder*/
+    nav li{
+      opacity: 0;
+    }
+    nav li .active{
+      opacity: 1;
+      transition: 0.5s ease-in-out;
+    }
     nav .link, .cta-green {
       display: none;
     }
     nav.active ul{
       display: block;
+      opacity: 1;
     }
     nav.active .link, nav.active .cta-green {
       display: block;
@@ -467,6 +571,11 @@
     .reservio .star{
       width: 17px;
     }
+    footer{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
 
     /*cenik*/
     .sudy-blok{
@@ -502,6 +611,20 @@
     h2{
       font-size: 30px;
     }
+    .slide h4{
+      font-size: 24px;
+    }
+    .slide p{
+      font-size: 18px;
+      max-width: 200px;
+    }
+    .slideshow-container{
+      width: 300px;
+      height: 250px;
+    }
+    .slide.active{
+      left: -50px;
+    }
   }
 
   @media(max-width: 500px){
@@ -521,4 +644,16 @@
     .provozovna iframe{
       width: 250px;
     }
+    #recenze   p{
+      font-size: 20px;
+    }
   }
+
+  /*animace*/
+  @keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.onas{
+  animation: fadeIn 1s ease-in-out;
+}
