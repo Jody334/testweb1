@@ -306,6 +306,9 @@
     text-align: center;
     padding: 10px;
   }
+  #recenze a{
+    color: black;
+  }
   .slideshow-wrapper {
       text-align: center;
     }
@@ -414,18 +417,26 @@
   /*kontakt*/
   .sec-kontakt{
     margin-top: 110px;
+    padding: 5px 20px;
+
+  }
+  .kontakty{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .info-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
   }
   .nadpis-kontakt{
     text-align: center;
     color: black;
-  }
-  .kontakt{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 30px;
-    flex-wrap: wrap;
-    gap: 30px;
   }
   .kontakt h4{
     font-size: 25px;
@@ -433,12 +444,13 @@
   }
   iframe{
     border-radius: var(--borderadius);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 50px;
   }
-  .zodpovedne-osoby{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
+  
+  td{
+    padding: 5px 20px;
+    color: rgb(0, 0, 0);
   }
   .provozovna{
     display: flex;
@@ -447,23 +459,27 @@
     gap: 5px;
     flex-direction: column;
   }
-  .kontakty{
+  .zodpovedne-osoby h4{
+    padding: 0;
+  }
+  .zodpovedne-osoby{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    gap: 50px;
+    justify-content: center;
     align-items: center;
-
+    gap: 15px;
   }
   .blok-kontakt{
     display: flex;
     flex-direction: column;
-    gap: 5px;
     text-align: center;
+    gap: 5px;
   }
-  .blok-kontakt h3{
+  .blok-kontakt h4{
     color: black;
     text-shadow: none;
+    font-weight: 350;
+    font-size: 28px;
   }
   /*footer*/
   footer{
@@ -544,6 +560,9 @@
     /*uvod*/
     .text-right{
       width: 80%;
+    }
+    .text-right p{
+      text-align: center;
     }
     .uvod h1{
       font-size: 55px;
@@ -626,8 +645,14 @@
     h2{
       font-size: 30px;
     }
-    .slide h4{
+    h3{
+      font-size: 26px;
+    }
+    h4{
       font-size: 24px;
+    }
+    .blok-kontakt h4{
+      font-size: 22px;
     }
     .slide p{
       font-size: 18px;
@@ -639,6 +664,9 @@
     }
     .slide.active{
       left: -50px;
+    }
+    .blok-kontakt p{
+      font-size: 15px;
     }
   }
 
