@@ -366,7 +366,6 @@
       cursor: pointer;
       z-index: 2;
       opacity: 0.8;
-      transition: background 0.2s;
     }
     .arrow:hover {
       scale: 1.05;
@@ -544,7 +543,7 @@
 
     /*uvod*/
     .text-right{
-      max-width: 100%;
+      width: 80%;
     }
     .uvod h1{
       font-size: 55px;
@@ -571,6 +570,9 @@
     }
     .uvod h3{
       font-size: 20px;
+    }
+    .text-right{
+      width: 80%;
     }
     .btn2{
       display: none;
@@ -620,10 +622,7 @@
     .kontakt h3{
       font-size: 22px;
     }
-    
-    .reservio{
-      display: none;
-    }
+ 
     h2{
       font-size: 30px;
     }
